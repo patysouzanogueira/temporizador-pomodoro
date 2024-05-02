@@ -31,7 +31,7 @@ musicaFoco.addEventListener('change', function(){
 
 function alterarContexto(contexto){
     html.setAttribute('data-contexto' , contexto);
-    banner.setAttribute('src',/imagens/${contexto}.png);
+    banner.setAttribute('src',`/imagens/${contexto}.png`);
     botoes.forEach(function (contexto){
         contexto.classList.remove('active');
     })
@@ -119,7 +119,7 @@ function zerar(){
 function mostrarTempo(){
     const tempo = new Date(tempoDecorridoEmSegundos * 1000);
     const tempoFormatado = tempo.toLocaleTimeString('pt-Br', {minute: '2-digit', second: '2-digit'});
-    tempoNaTela.innerHTML = ${tempoFormatado};
+    tempoNaTela.innerHTML = `${tempoFormatado}`;
 }
 
 mostrarTempo();
